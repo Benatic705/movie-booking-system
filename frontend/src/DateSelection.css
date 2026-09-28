@@ -1,0 +1,324 @@
+/* MAIN PAGE */
+.date-page {
+  min-height: 100vh;
+  background: #101014;
+  color: white;
+  padding: 40px 6%;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.date-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.date-label {
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.date-header h1 {
+  font-size: 52px;
+  margin: 12px 0;
+}
+
+.date-header p {
+  color: #aaa;
+  font-size: 20px;
+}
+
+.booking-info {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 20px;
+}
+
+/* DATE CARDS */
+.dates-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 50px;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
+}
+
+/* EACH DATE */
+.date-card {
+  min-height: 150px;
+  padding: 20px 10px;
+
+  border: 1px solid #33333d;
+  border-radius: 18px;
+
+  background: #19191f;
+  color: white;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s ease;
+}
+
+.date-card:hover {
+  transform: translateY(-5px);
+  border-color: #e000d8;
+  background: #24242b;
+}
+
+/* SELECTED DATE */
+.date-card.selected {
+  background: linear-gradient(
+    135deg,
+    #e900b8,
+    #b800e8
+  );
+
+  border-color: #ff30dc;
+  transform: translateY(-5px);
+}
+
+/* TODAY */
+.date-card.today {
+  border-color: #e000d8;
+}
+
+.today-text {
+  font-size: 11px;
+  font-weight: bold;
+  color: #ff45df;
+  margin-bottom: 8px;
+}
+
+.date-card.selected .today-text {
+  color: white;
+}
+
+.day {
+  font-size: 15px;
+  color: #aaa;
+  font-weight: 600;
+}
+
+.date-card.selected .day {
+  color: white;
+}
+
+.date-number {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.month {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.date-card.selected .month {
+  color: white;
+}
+
+/* SHOWTIME SECTION */
+.showtime-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
+
+  padding: 40px;
+
+  background: #141419;
+  border: 1px solid #30303a;
+  border-radius: 25px;
+
+  box-sizing: border-box;
+}
+
+.showtime-heading span {
+  color: #aaa;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.showtime-heading h2 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.showtime-heading p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+/* SHOWTIME BUTTONS */
+.showtime-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.showtime-card {
+  min-height: 130px;
+
+  padding: 20px;
+
+  background: #1d1d24;
+  color: white;
+
+  border: 1px solid #393943;
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s ease;
+}
+
+.showtime-card:hover {
+  transform: translateY(-5px);
+  border-color: #e000d8;
+  background: #25252e;
+}
+
+.time-icon {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.time-info {
+  text-align: center;
+}
+
+.time-info h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.time-info p {
+  color: #aaa;
+  font-size: 13px;
+  margin: 8px 0;
+}
+
+.time-arrow {
+  color: #e000d8;
+  font-size: 20px;
+}
+
+/* MOVIE SUMMARY */
+.movie-summary {
+  max-width: 900px;
+  margin: 50px auto;
+
+  padding: 25px 35px;
+
+  border: 1px solid #30303a;
+  border-radius: 20px;
+
+  background: #15151b;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.summary-icon {
+  font-size: 35px;
+}
+
+.movie-summary small {
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
+.movie-summary h2 {
+  margin: 8px 0;
+  font-size: 26px;
+}
+
+.movie-summary p {
+  margin: 6px 0;
+  color: #aaa;
+}
+
+/* BACK BUTTON */
+.back-button {
+  display: block;
+  margin: 30px auto;
+
+  padding: 14px 35px;
+
+  border-radius: 30px;
+  border: 1px solid #444;
+
+  background: transparent;
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.back-button:hover {
+  border-color: #e000d8;
+  color: #e000d8;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+
+  .dates-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .showtime-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  .date-page {
+    padding: 25px 15px;
+  }
+
+  .date-header h1 {
+    font-size: 36px;
+  }
+
+  .booking-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dates-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .showtime-section {
+    padding: 25px 15px;
+  }
+
+  .showtime-list {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-summary {
+    padding: 20px;
+  }
+}

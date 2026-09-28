@@ -1,0 +1,345 @@
+.confirmation-page {
+  min-height: 100vh;
+  background: #0b0b0f;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+/* SUCCESS ICON */
+
+.success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #20c77a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  box-shadow: 0 0 30px rgba(32, 199, 122, 0.25);
+}
+
+.confirmation-page > h1 {
+  font-size: 42px;
+  margin: 0;
+  text-align: center;
+  line-height: 1.15;
+}
+
+.success-message {
+  color: #aaaab5;
+  font-size: 18px;
+  margin: 12px 0 35px;
+  text-align: center;
+}
+
+/* E-TICKET */
+
+.ticket {
+  width: 100%;
+  max-width: 680px;
+  background: #19191f;
+  border: 1px solid #303039;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* HEADER */
+
+.ticket-header {
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #303039;
+}
+
+.brand {
+  color: #d91be8;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ticket-header h2 {
+  margin: 6px 0 0;
+  font-size: 24px;
+}
+
+.booking-status {
+  background: rgba(32, 199, 122, 0.12);
+  color: #20c77a;
+  border: 1px solid rgba(32, 199, 122, 0.4);
+  padding: 9px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* MOVIE */
+
+.movie-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 28px 32px;
+}
+
+.movie-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: #25252d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.movie-section small,
+.detail span,
+.ticket-bottom small {
+  display: block;
+  color: #858591;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.movie-section h2 {
+  margin: 5px 0 0;
+  font-size: 25px;
+}
+
+/* DETAILS */
+
+.ticket-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 5px 32px 30px;
+}
+
+.detail strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 16px;
+  color: #f2f2f5;
+}
+
+/* DIVIDER */
+
+.ticket-divider {
+  position: relative;
+  border-top: 1px dashed #4a4a55;
+  margin: 0 20px;
+}
+
+.ticket-divider::before,
+.ticket-divider::after {
+  content: "";
+  position: absolute;
+  top: -13px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #0b0b0f;
+}
+
+.ticket-divider::before {
+  left: -33px;
+}
+
+.ticket-divider::after {
+  right: -33px;
+}
+
+/* BOTTOM */
+
+.ticket-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 32px;
+}
+
+.ticket-bottom strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 16px;
+}
+
+.total-box {
+  text-align: right;
+}
+
+.total-box strong {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+/* BARCODE */
+
+.barcode {
+  margin: 0 32px 30px;
+  padding: 18px;
+  background: #ffffff;
+  color: #111111;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.barcode-lines {
+  font-family: monospace;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.barcode span {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* BUTTONS */
+
+.confirmation-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.print-btn,
+.home-btn {
+  border: none;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.print-btn {
+  background: linear-gradient(
+    90deg,
+    #ec0fa9,
+    #bd16e8
+  );
+  color: white;
+}
+
+.home-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid #45454f;
+}
+
+.print-btn:hover,
+.home-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .confirmation-page {
+    padding: 35px 12px;
+  }
+
+  .confirmation-page > h1 {
+    font-size: 32px;
+  }
+
+  .success-message {
+    font-size: 15px;
+  }
+
+  .ticket-header {
+    padding: 22px;
+  }
+
+  .movie-section {
+    padding: 22px;
+  }
+
+  .ticket-details {
+    padding: 5px 22px 25px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .ticket-bottom {
+    padding: 22px;
+  }
+
+  .barcode {
+    margin: 0 22px 22px;
+  }
+
+  .booking-status {
+    font-size: 10px;
+    padding: 7px 9px;
+  }
+}
+
+/* PRINT */
+
+@media print {
+
+  body {
+    background: white;
+  }
+
+  .confirmation-page {
+    background: white;
+    color: black;
+    padding: 20px;
+  }
+
+  .success-icon,
+  .success-message,
+  .confirmation-buttons {
+    display: none;
+  }
+
+  .ticket {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    background: white;
+    color: black;
+  }
+
+  .ticket-header,
+  .movie-section,
+  .ticket-details,
+  .ticket-bottom {
+    color: black;
+  }
+
+  .detail strong,
+  .movie-section h2,
+  .ticket-bottom strong,
+  .ticket-header h2 {
+    color: black;
+  }
+
+  .ticket-divider {
+    border-color: #999;
+  }
+}

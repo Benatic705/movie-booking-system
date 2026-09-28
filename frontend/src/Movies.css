@@ -1,0 +1,134 @@
+.movies-page {
+  min-height: 100vh;
+  background: #080808;
+  color: white;
+  padding: 55px 7%;
+  box-sizing: border-box;
+}
+
+.movies-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+.small-title {
+  color: #f02ac8;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin: 0 0 15px;
+}
+
+.movies-header h1 {
+  font-size: 52px;
+  margin: 0;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.location {
+  font-size: 22px;
+  color: #ddd;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.movie-card {
+  background: #121212;
+  border: 1px solid #292929;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+  border-color: #df2bc5;
+  box-shadow: 0 10px 35px rgba(220, 30, 190, 0.18);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.book-button {
+  background: #d927c4;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 7px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.book-button:hover {
+  background: #ef35d5;
+}
+
+.rating {
+  font-size: 18px;
+  margin: 15px 0 8px;
+}
+
+.movie-content h2 {
+  font-size: 24px;
+  margin: 8px 0;
+}
+
+.movie-content p {
+  color: #ddd;
+  font-size: 16px;
+}
+
+.available {
+  color: #eee;
+  margin: 12px 0;
+}
+
+.bottom-button {
+  margin-top: 5px;
+}
+
+@media (max-width: 900px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movies-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .movies-header h1 {
+    font-size: 38px;
+  }
+
+  .movie-poster {
+    height: 430px;
+  }
+}
